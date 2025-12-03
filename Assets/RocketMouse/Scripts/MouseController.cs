@@ -65,9 +65,9 @@ public class MouseController : MonoBehaviour
 	    }
 	    if (!dead) 
 	    {
-	        Vector2 newVelocity = GetComponent<Rigidbody2D>().velocity;
+	        Vector2 newVelocity = GetComponent<Rigidbody2D>().linearVelocity;
 	        newVelocity.x = forwardMovementSpeed;
-	        GetComponent<Rigidbody2D>().velocity = newVelocity;
+	        GetComponent<Rigidbody2D>().linearVelocity = newVelocity;
 	    }
   	    UpdateGroundedStatus();
 	    AdjustJetpack(jetpackActive);
